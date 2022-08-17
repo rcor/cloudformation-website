@@ -10,3 +10,10 @@ Resources:
           Parameters:
             Project: !Ref Project
           TemplateURL: ./stacks/website.yaml
+
+Outputs:
+  LogicalID:
+    Description: Information about the value
+    Value:
+    Export: 
+      Name:
