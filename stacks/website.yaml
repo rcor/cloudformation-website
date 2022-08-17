@@ -5,8 +5,13 @@ Parameters:
     Type: String
 
 Resources:
-  s3Bucket:
+  S3Bucket:
     Type: AWS::S3::Bucket
     Properties: 
       AccessControl: Private 
-      BucketName: !Sub '${AWS::StackName}-${Project}'
+      BucketName: !Sub '${Project}-website'
+
+Outputs:
+  S3Bucket:
+    Description: Bucket Created using this template.
+    Value: !Ref S3Bucket
