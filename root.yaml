@@ -11,9 +11,3 @@ Resources:
             Project: !Ref Project
           TemplateURL: ./stacks/website.yaml
 
-Outputs:
-  S3Bucket:
-    Description: Information about the value
-    Value: !Ref Website
-    Export: 
-      Name: !Ref Website

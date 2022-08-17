@@ -10,3 +10,10 @@ Resources:
     Properties: 
       AccessControl: Private 
       BucketName: !Sub '${AWS::StackName}-${Project}-website'
+
+Outputs:
+  S3Bucket:
+    Description: Information about the value
+    Value: !Ref s3Bucket
+    Export: 
+      Name: !Ref s3Bucket
