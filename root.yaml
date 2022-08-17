@@ -2,10 +2,6 @@ Parameters:
     Project:
       Description: Project Name | WebSite name 
       Type: String
-    BucketCloudformation: 
-      Description: Bucket with the stacks required
-      Type: String
-
 
 Resources:
     Website:
@@ -13,4 +9,4 @@ Resources:
       Properties:
           Parameters:
             Project: !Ref Project
-          TemplateURL: !Sub ${BucketCloudformation}/stacks/website.yaml
+          TemplateURL: ./stacks/website.yaml
