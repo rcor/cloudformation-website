@@ -1,0 +1,11 @@
+Parameters:
+    Project:
+    Description: Project Name | WebSite name 
+    Type: String
+
+Resources:
+    Website:
+      Properties:
+          Parameters:
+            Project: !Ref Project
+      Template-url: stacks/website.yaml
