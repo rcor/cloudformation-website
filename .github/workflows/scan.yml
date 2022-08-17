@@ -1,0 +1,14 @@
+name: Validate Cloudformation Stack
+on:
+  push:
+    branches:
+      - 'main'
+jobs:
+  build: 
+    steps: 
+    - uses: actions/checkout@v1
+    - name: Install Dependencies
+      run: pip install cfn-lint awscli
+    - name: Run Lint 
+      run: cfn-lint 
+
