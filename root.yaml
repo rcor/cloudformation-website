@@ -4,7 +4,7 @@ Parameters:
       Type: String
 
 Resources:
-    Website:
+    website:
       Type: AWS::CloudFormation::Stack
       Properties:
           Parameters:
