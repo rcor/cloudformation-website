@@ -11,5 +11,5 @@ jobs:
     - name: Install Dependencies
       run: pip install cfn-lint awscli
     - name: Run Lint 
-      run: cfn-lint 
+      run: cfn-lint .
 
