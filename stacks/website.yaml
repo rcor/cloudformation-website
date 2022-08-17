@@ -9,4 +9,4 @@ Resources:
     Type: AWS::S3::Bucket
     Properties: 
       AccessControl: Private 
-      BucketName: !Ref Project
+      BucketName: !Sub ${AWS::StackName}-${Project}
