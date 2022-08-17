@@ -12,8 +12,8 @@ Resources:
           TemplateURL: ./stacks/website.yaml
 
 Outputs:
-  LogicalID:
+  S3Bucket:
     Description: Information about the value
-    Value:
+    Value: !Ref Website
     Export: 
-      Name:
+      Name: !Ref Website
