@@ -21,6 +21,6 @@ jobs:
     - name: Package Stacks
       run: aws cloudformation package --template-file root.yaml --s3-bucket ${{ secrets.S3_BUCKET_CLOUDFORMATION}} --output-template-file output.yaml
     - name: Deploy Stack
-      run: aws cloudformation --template-file output.yaml --s3-bucket ${{ secrets.S3_BUCKET_CLOUDFORMATION}} --stack-name ${{ secrets.STACK_NAME}} --parameter-overrides  file://parameters.json --region ${{ secrets.REGION}}
+      run: aws cloudformation deploy --template-file output.yaml --s3-bucket ${{ secrets.S3_BUCKET_CLOUDFORMATION}} --stack-name ${{ secrets.STACK_NAME}} --parameter-overrides  file://parameters.json --region ${{ secrets.REGION}}
     
 
